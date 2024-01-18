@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Color Changer Hands-On</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
+      background-color: yellow;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: black;
+    }
+
+    #KOLORDiv {
+      width: 400px;
+      height: 400px;
+      background-color: whitesmoke;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    #KOLORButton {
+      padding: 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #KOLORButton:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript colorChanger() Hands-On</h1>
+  
+  <button id="KOLORButton">Click This!</button>
+  <div id="KOLORDiv"></div>
+
+  <script>
+    document.getElementById("KOLORButton").addEventListener('click', function() {
+      var KOLORDiv = document.getElementById("KOLORDiv");
+
+      if (KOLORDiv.style.backgroundColor === 'green') {
+        KOLORDiv.style.backgroundColor = 'blue';
+      } else {
+        KOLORDiv.style.backgroundColor = 'green';
+      }
+    });
+  </script>
+
+</body>
+</html>
